@@ -61,6 +61,7 @@ module ActiveAdmin
     end
 
     delegate :register, :to => :application
+    delegate :register_section, :to => :application
     delegate :unload!,  :to => :application
     delegate :load!,    :to => :application
     delegate :routes,   :to => :application

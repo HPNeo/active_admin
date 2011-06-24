@@ -60,6 +60,10 @@ module ActiveAdmin
       config
     end
 
+    def register_section(section)
+      menu.add(section[:name], section[:url])
+    end
+
     def root?
       name == :root
     end
