@@ -75,6 +75,8 @@ module ActiveAdmin
     end
 
     def register_section(section)
+      namespace_name = options[:namespace] == false ? :root : (options[:namespace] || default_namespace || :root)
+      namespace = find_or_create_namespace(namespace_name)
       if section[:name] && section[:url]
         namespace.register_section(section)
       end
